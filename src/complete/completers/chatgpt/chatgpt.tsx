@@ -222,25 +222,9 @@ export class ChatGPTComplete implements Completer {
 
 	async get_models(settings: string) {
 		return [
-			new ChatGPT(
-				settings,
-				"gpt-3.5-turbo-1106",
-				"GPT 3.5 Turbo preview (recommended)",
-				"OpenAI's ChatGPT model, with a longer context window"
-			),
-			new ChatGPT(
-				settings,
-				"gpt-3.5-turbo",
-				"GPT 3.5 Turbo (old)",
-				"OpenAI's ChatGPT model"
-			),
-			new ChatGPT(
-				settings,
-				"gpt-4-1106-preview",
-				"GPT 4 Turbo",
-				"OpenAI's GPT-4 model, with a longer context window"
-			),
-			new ChatGPT(settings, "gpt-4", "GPT 4", "OpenAI's GPT-4 model"),
+			new ChatGPT(settings, "gpt-4o-mini", "GPT 4o mini", "OpenAI's GPT 4o mini"),
+			new ChatGPT(settings, "o3-mini", "o3 mini", "OpenAI's o3-mini"),
+			new ChatGPT(settings, "o3-mini-low", "o3 mini low", "OpenAI's o3-mini low"),
 		];
 	}
 
